@@ -1,0 +1,251 @@
+.header {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.nav__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle; 
+    transition: all 0.3s ease;
+}
+
+.logo h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color:  #57bfba;
+    margin: 0;
+    line-height: 20px;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    column-gap: 2.7rem;
+}
+
+.nav__item a {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 70px;
+}
+
+.nav__icons {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    line-height: 70px;
+}
+
+.cart_icon, .fav_icon {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 22%;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.nav__icons .icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.user__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.nav__icons i {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.nav__icons .profile img{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.nav__icons .profile{
+    position: relative;
+    z-index: 9;
+}
+
+/* Add these styles to your header.css */
+
+.profile_actions {
+    position: absolute;
+    top: 50px; /* Adjust depending on the size of your profile icon */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile_actions div {
+    display: flex;
+    flex-direction:column;
+    gap: 8px;
+}
+
+.profile_actions a,
+.profile_actions span {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile_actions a:hover,
+.profile_actions span:hover {
+    color: #007bff;
+}
+
+/* For the profile icon */
+.profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Ensure profile actions is hidden by default */
+.profile_actions {
+    display: none;
+}
+
+.profile:hover .profile_actions {
+    display: block;
+}
+
+
+
+
+.mobile__menu {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    display: none;
+}
+
+.nav_active {
+    font-weight: 700 !important;
+}
+
+.sticky_header {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    box-shadow: 3px 3px 8px -3px #ddd;
+    background-color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    
+    .menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background: #fff;
+        z-index: 99999;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .active_menu {
+        display: block;
+    }
+
+    .mobile_menu span i {
+        font-size: 1.1rem !important;
+    }
+
+    .logo img {
+        width: 1.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    .fav_icon i, .cart_icon i {
+        font-size: 1.2rem !important;
+    }
+
+    .nav__icons span img {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .header {
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+    }
+}
